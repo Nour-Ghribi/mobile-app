@@ -4,9 +4,9 @@ import 'package:http/http.dart' as http;
 import '../models/movie_model.dart';
 
 class MovieApiService {
-  // TA clé RapidAPI
-  static const String _apiKey =
-      'b3d3786989msh82000ea7d2f4015p1aa873jsn80c9762a2542';
+  // RapidAPI key: never commit it. Run with  --dart-define=RAPIDAPI_KEY=<your key>
+  // (for production, call the API through your own backend instead of shipping a key in the app).
+  static const String _apiKey = String.fromEnvironment('RAPIDAPI_KEY');
 
   // Nouveau host IMDb8
   static const String _host = 'imdb8.p.rapidapi.com';
